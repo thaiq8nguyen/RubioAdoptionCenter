@@ -1,15 +1,24 @@
+@import "../../assets/styles/app.less";
+
 .header {
   display: flex;
   padding: 1.5rem;
   align-items: center;
-  //justify-content: space-between;
+  background-color: @primaryColor;
   .top-menu {
-    display: flex;
-    justify-content: space-between;
+    .flex(@jc:space-evenly, @ai:center);
     width: 100%;
+    .logo {
+      width: 5.3rem;
+      height: 5.7rem;
+      flex-shrink: 0;
+    }
+
     .heading {
       font-weight: 300;
-      font-size: 2.6rem;
+      font-size: 2.4rem;
+      color: @textIconColor;
+      margin-left: 1rem;
     }
     .navbar {
       display: none;
@@ -17,6 +26,8 @@
     .toggle-side-menu-btn {
       border: none;
       cursor: pointer;
+      color: @textIconColor;
+      background-color: @primaryColor;
     }
   }
 }

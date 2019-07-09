@@ -1,0 +1,94 @@
+@import "../../assets/styles/app.less";
+.cards {
+  .flex(@direction: column);
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.4);
+  margin: 2rem 3rem;
+  padding: 0;
+  background-color: white;
+  border-radius: 0.5rem;
+  .image-container {
+    .card-image {
+      border-radius: 0.5rem 0.5rem 0 0;
+      width: 100%;
+    }
+  }
+  .card-caption {
+    position: relative;
+    .flex(@jc: space-between);
+    .like-btn {
+      position: absolute;
+      text-decoration: none;
+      color: @textIconColor;
+      font-size: 1.8rem;
+      top: -3rem;
+      //border: 0.1rem solid #00796b;
+      padding: 1rem 3rem;
+      right: 2rem;
+      background-color: @accentColor;
+      border-radius: 0.7rem;
+
+      &:hover {
+        background-color: #9667ff;
+      }
+    }
+  }
+  .card-content {
+    .flex(@direction: column);
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+    .title {
+      h1 {
+        font-size: 2.6rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+      }
+    }
+
+    .body {
+      margin: 3rem 0;
+      .about {
+        font-size: 2rem;
+      }
+      .when {
+        margin: 2rem 0;
+        font-size: 1.8rem;
+        .when-title {
+          //font-weight: 300;
+          color: @secondaryTextColor;
+        }
+        .time {
+          font-style: italic;
+        }
+      }
+      .where {
+        margin: 2rem 0;
+        font-size: 1.8rem;
+        .where-title {
+          //font-weight: 300;
+          color: @secondaryTextColor;
+        }
+        .location {
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .card-actions {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    padding: 1rem 4rem;
+    background-color: @darkPrimaryColor;
+    .flex(@jc: space-between);
+    span {
+      font-size: 2rem;
+      font-weight: 400;
+      color: @textIconColor;
+    }
+  }
+}
+.fade-appear {
+  height: 0;
+}
+.fade-appear.fade-appear-active {
+  height: 100%;
+  transition: height 1000ms linear;
+}

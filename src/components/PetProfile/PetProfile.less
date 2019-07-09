@@ -1,0 +1,71 @@
+@import "../../assets/styles/app.less";
+
+.pet-profile {
+  .flex(@direction: column);
+  margin: 2rem 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.4);
+  .pet-profile-header {
+    .flex(@jc: space-between);
+    padding: 1.5rem 4rem;
+    background-color: @darkPrimaryColor;
+    border-radius: 0.5rem 0.5rem 0 0;
+    span {
+      color: @textIconColor;
+      font-size: 2rem;
+    }
+    button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      color: @textIconColor;
+    }
+  }
+  .image-container {
+    text-align: center;
+    margin: 2rem 0;
+
+    .pet-image {
+      max-width: 20rem;
+      max-height: 20rem;
+      width: auto;
+      height: auto;
+      border: 0.5rem solid white;
+    }
+  }
+
+  .content {
+    margin: 5rem 3rem 3rem 2rem;
+    h2 {
+      text-align: center;
+    }
+    .attributes-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 3rem;
+      .attributes {
+        .flex(@direction: column);
+        border: 0.1rem solid black;
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        color: @textIconColor;
+        background-color: @darkPrimaryColor;
+        padding: 1rem;
+        flex-basis: 30%;
+        .attribute-name {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        .attribute-content {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .action {
+  }
+}
