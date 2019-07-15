@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import API from "../../utils/API";
+import PetFinder from "../../utils/PetFinderAPI";
 
 import FeaturedAnimal from "../FeaturedAnimal/FeaturedAnimal";
 import PetProfile from "../PetProfile/PetProfile";
@@ -18,17 +18,13 @@ const FeaturedAnimals = () => {
 
   useEffect(() => {
     setLoading(true);
-    API.getAnimals()
+    PetFinder.getPets
       .then(response => {
-        setLoading(false);
         setAnimals(response.data.animals);
+        setLoading(false);
       })
       .catch(error => {
-        if (error.response) {
-          if (error.response.status === 401) {
-            API.getAuthenticated();
-          }
-        }
+        console.log("Error: ", error);
       });
   }, []);
 

@@ -8,7 +8,8 @@
     "prettier/react"
   ],
   "globals": {
-    "localStorage": true
+    "localStorage": true,
+    "Promise": true
   },
   "rules": {
     "react/prop-types": 0,

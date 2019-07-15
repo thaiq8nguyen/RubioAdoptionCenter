@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
+const dotEnv = require("dotenv");
+dotEnv.config();
 import { render } from "react-dom";
 import { Link, Router } from "@reach/router";
-import API from "./utils/API";
-
 import "bulma/css/bulma.css";
 import Header from "./components/Header/Header";
 import Home from "./views/Home";
@@ -39,7 +39,7 @@ library.add(
 
 const App = () => {
   useEffect(() => {
-    API.getAuthenticated();
+    //API.getAuthenticated();
   }, []);
   return (
     <div className="app">

@@ -5,6 +5,8 @@ const client = axios.create({
   responseType: "json"
 });
 
+const isTokenRequired = true;
+
 // if (localStorage.getItem("pet_finder")) {
 //   const auth = JSON.parse(localStorage.getItem("pet_finder"));
 // }
@@ -27,9 +29,9 @@ export default {
   getAuthenticated() {
     client
       .post("https://api.petfinder.com/v2/oauth2/token", {
-        client_id: "KA9P2FXpp12JWykZgIiedKudGGx1FfB1iU7m2nt5AxRekq9wgs",
-        client_secret: "auxCXUAWJvy8MgNvZVmBXhGE3jYgzOs2HvYdJwbA",
-        grant_type: "client_credentials"
+        client_id: "",
+        client_secret: "",
+        grant_type: ""
       })
       .then(response => {
         //console.log(response.data);
